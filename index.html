@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Joke Book</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <div class="img-container">
+        <div class="inner-container">
+            <h1>The Joke Book</h1>
+            <h2>A Place to View and Write Jokes </h2>
+            <div id="message"></div>
+            <div class="wrapper">
+              <button id="signup" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-up-modal">Sign Up</button>
+             <div id="sign-up-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+               <div class="modal-dialog modal-lg" role="document">
+                 <div class="modal-content">
+                   <form id="sign-up" class="su-border">
+               <fieldset>
+                 <legend class="su">Sign up!</legend>
+                 <h4>Email and Password are Case Sensitive!</h4>
+                 <input type="text" name="credentials[email]" placeholder="Email">
+                 <input type="password" name="credentials[password]" placeholder="Password">
+                 <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                 <input type="submit" value="Sign up!">
+               </fieldset>
+             </form>
+             <div class="signupmessage"></div>
+               </div>
+              </div>
+             </div>
+        </div>
+        </div>
+
+        </div>
+          
     </body>
 </html>
