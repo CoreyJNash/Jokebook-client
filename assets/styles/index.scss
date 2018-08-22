@@ -81,7 +81,11 @@ h4 {
     text-shadow: -1px -1px 0 #000,
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
-		1px 1px 0 #000;
+        1px 1px 0 #000;
+}
+
+#signup:hover {
+    opacity: .9;
 }
 
 #signin {
@@ -95,6 +99,10 @@ h4 {
 		1px 1px 0 #000;
 }
 
+#signin:hover {
+    opacity: .9;
+}
+
 #changepassword {
     font-family: 'Shadows Into Light', cursive;
     font-size: 20px;
@@ -106,6 +114,10 @@ h4 {
 		1px 1px 0 #000;
 }
 
+#changepassword:hover {
+    opacity: .9;
+}
+
 #signout {
     font-family: 'Shadows Into Light', cursive;
     font-size: 20px;
@@ -115,6 +127,44 @@ h4 {
 		1px -1px 0 #000,
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
+}
+
+#create {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    color: white;
+    background-color: gray;
+    border: 2px solid white;
+    text-shadow: -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+        1px 1px 0 #000;
+    margin: 5px;
+}
+
+#create:hover {
+    opacity: .9;
+}
+
+#show {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    color: white;
+    background-color: gray;
+    border: 2px solid white;
+    text-shadow: -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+        1px 1px 0 #000;
+    margin: 5px;
+}
+
+#show:hover {
+    opacity: .9;
+}
+
+#signout:hover {
+    opacity: .9;
 }
 
 .su {
@@ -165,6 +215,20 @@ h4 {
 }
 
 .so-border {
+    border: 3px solid gray;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 10px;
+}
+
+.cj {
+    font-family: 'Shadows Into Light', cursive;
+    color: black;
+}
+
+.cj-border {
     border: 3px solid gray;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
