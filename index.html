@@ -85,7 +85,41 @@
          </div>
          </div>
         
-      
+         <div class="crud-buttons">
+          <button id="create" type="button" class="btn btn-primary-create hidden" data-toggle="modal" data-target=".bd-example-modal-lg">Write A Joke!</button>
+          
+          <div id="create-joke-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <form id="create-joke" class="cj-border">
+                  <fieldset>
+                    <legend class="cj">Write A Joke</legend>
+                    <input type="text" name="joke[title]" placeholder="JOKE TITLE">
+                    <br>
+                    <input type="text" name="joke[joke]" placeholder="WRITE YOUR JOKE HERE">
+                    <br>
+                    <input type="text" name="joke[writer]" placeholder="WRITER">
+                    <br>
+                    <input id="create-jokes" type="submit" value="Write A Joke">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+      <button id="show" type="button" class="btn btn-primary-show hidden" data-toggle="modal" data-target=".bd-show-modal-lg">Check Out These Jokes</button>
+
+      <div id="show-game-modal" class="modal fade bd-show-modal-lg" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div id="show-games-list"></div>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+        
+        
+        </div>
         </div>
         </div>
 
