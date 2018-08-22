@@ -31,8 +31,8 @@ const signInSuccess = function (data) {
   $('#changepassword').removeClass('hidden')
   $('#signin').addClass('hidden')
   $('#signup').addClass('hidden')
-//   $('#create').removeClass('hidden')
-//   $('#show').removeClass('hidden')
+  $('#create').removeClass('hidden')
+  $('#show').removeClass('hidden')
   $('#message').addClass('hidden')
 //   $('#update').removeClass('hidden')
   $('#sign-in-modal').modal('hide')
@@ -63,11 +63,11 @@ const signOutSuccess = function () {
   $('#changepassword').addClass('hidden')
   $('#signout').addClass('hidden')
   $('#message').removeClass('hidden')
-//   $('#create').addClass('hidden')
-//   $('#show').addClass('hidden')
+  $('#create').addClass('hidden')
+  $('#show').addClass('hidden')
 //   $('#update').addClass('hidden')
   $('#sign-out-modal').modal('hide')
-  $("#message").delay(3200).fadeOut(300);
+//   $("#message").delay(3200).fadeOut(300);
 
 //   console.log('signOutSuccess ran and nothing was returned!')
   store.user = null
