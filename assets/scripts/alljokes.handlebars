@@ -1,0 +1,20 @@
+{{#each jokes as |joke|}}
+<div class="show-wrapper">
+<h1><b>{{joke.title}}</b></h1>
+<h3>JOKE: {{joke.joke}}</h3>
+<h3>WRITER: {{joke.writer}}</h3>
+<h3>GAME ID: {{joke.id}}</h3>
+
+  <ul data-id="{{joke.id}}"> 
+    <li>{{#if joke.title}}
+      {{joke.title}}
+      {{else}}
+      No joke
+      {{/if}}
+    </li>
+    <li><button class="delete" type="submit">DELETE</button></li>
+  </ul>
+</div>
+
+
+{{/each}}
