@@ -37,6 +37,55 @@
                </div>
               </div>
              </div>
+
+             <button id="signin" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+       <div id="sign-in-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+         <div class="modal-dialog modal-lg" role="document">
+           <div class="modal-content">
+             <form id="sign-in" class="si-border">
+         <fieldset>
+           <legend class="si">Sign in!</legend>
+           <h4>Email and Password are Case Sensitive!</h4>
+           <input type="text" name="credentials[email]" placeholder="Email">
+           <input type="password" name="credentials[password]" placeholder="Password">
+           <input type="submit" value="Sign in!">
+         </fieldset>
+       </form>
+         </div>
+        </div>
+       </div>
+
+       <button id="changepassword" type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#change-password-modal">Change Password</button>
+       <div id="change-password-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+         <div class="modal-dialog modal-lg" role="document">
+           <div class="modal-content">
+             <form id="change-password" class="cp-border">
+         <fieldset>
+           <legend class="cp">Change Password!</legend>
+           <input type="password" name="passwords[old]" placeholder="Old Password">
+           <input type="password" name="passwords[new]" placeholder="New Password">
+           <input type="submit" value="Change Password!">
+         </fieldset>
+       </form>
+         </div>
+        </div>
+       </div>
+
+       <button id="signout" type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#sign-out-modal">Sign Out</button>
+       <div id="sign-out-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+         <div class="modal-dialog modal-lg" role="document">
+           <div class="modal-content">
+             <form id="sign-out" class="so-border">
+         <fieldset>
+           <legend class="so">Sign Out!</legend>
+           <input type="submit" value="Sign Out!">
+         </fieldset>
+       </form>
+         </div>
+         </div>
+         </div>
+        
+      
         </div>
         </div>
 
