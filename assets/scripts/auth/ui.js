@@ -8,6 +8,7 @@ const signUpSuccess = function (data) {
   $('#message').css('text-align', 'center')
   $('#message').css('font-family', 'Shadows Into Light')
   $('#sign-up-modal').modal('hide')
+  $('#message').css('text-shadow', '-1px -1px 0 #000', '1px -1px 0 #000', '-1px 1px 0 #000', '1px 1px 0 #000')
   $('#sign-up')[0].reset()
 //   console.log('signUpSuccess ran. Data is :', data)
   
@@ -18,6 +19,7 @@ const signUpFailure = function (error) {
   $('#message').css('text-align', 'center')
   $('#message').css('font-family', 'Shadows Into Light')
   $('#message').css('font-size', '50px')
+  $('#message').css('text-shadow', '-1px -1px 0 #000', '1px -1px 0 #000', '-1px 1px 0 #000', '1px 1px 0 #000')
   $('#sign-up-modal').modal('hide')
   $('#sign-up')[0].reset()
 //   console.error('signUpFailure ran. Error is :', error)
@@ -44,6 +46,7 @@ const signInFailure = function (error) {
   $('#message').css('text-align', 'center')
   $('#message').css('font-family', 'Shadows Into Light')
   $('#message').css('font-size', '50px')
+  $('#message').css('text-shadow', '-1px -1px 0 #000', '1px -1px 0 #000', '-1px 1px 0 #000', '1px 1px 0 #000')
   $('#sign-in-modal').modal('hide')
   $('#sign-in')[0].reset()
 //   console.error('signInFailure ran. Error is :', error)
@@ -52,14 +55,20 @@ const signInFailure = function (error) {
 const signOutSuccess = function () {
   $('#message').text('Signed out successfully')
   $('#message').css('text-align', 'center')
+  $('#message').css('font-family', 'Shadows Into Light')
+  $('#message').css('font-size', '50px')
+  $('#message').css('text-shadow', '-1px -1px 0 #000', '1px -1px 0 #000', '-1px 1px 0 #000', '1px 1px 0 #000')
   $('#signup').removeClass('hidden')
   $('#signin').removeClass('hidden')
   $('#changepassword').addClass('hidden')
   $('#signout').addClass('hidden')
+  $('#message').removeClass('hidden')
 //   $('#create').addClass('hidden')
 //   $('#show').addClass('hidden')
 //   $('#update').addClass('hidden')
   $('#sign-out-modal').modal('hide')
+  $("#message").delay(3200).fadeOut(300);
+
 //   console.log('signOutSuccess ran and nothing was returned!')
   store.user = null
 }
@@ -70,6 +79,7 @@ const signOutFailure = function (error) {
   $('#message').css('text-align', 'center')
   $('#message').css('font-family', 'Shadows Into Light')
   $('#message').css('font-size', '50px')
+  $('#message').css('text-shadow', '-1px -1px 0 #000', '1px -1px 0 #000', '-1px 1px 0 #000', '1px 1px 0 #000')
 //   console.error('signOutFailure ran. Error is :', error)
 }
 
@@ -77,6 +87,7 @@ const changePasswordSuccess = function () {
     $('#message').text('Changed password successfully')
     $('#message').css('font-family', 'Shadows Into Light')
     $('#message').css('font-size', '50px')
+    $('#message').css('text-shadow', '-1px -1px 0 #000', '1px -1px 0 #000', '-1px 1px 0 #000', '1px 1px 0 #000')
     $('#message').css('text-align', 'center')
     $('#message').removeClass('hidden')
     $('#change-password-modal').modal('hide')
@@ -89,6 +100,7 @@ const changePasswordFailure = function (error) {
     $('#message').removeClass('hidden')
     $('#message').css('font-family', 'Shadows Into Light')
     $('#message').css('font-size', '50px')
+    $('#message').css('text-shadow', '-1px -1px 0 #000', '1px -1px 0 #000', '-1px 1px 0 #000', '1px 1px 0 #000')
     $('#message').css('text-align', 'center')
     $('#change-password-modal').modal('hide')
 
