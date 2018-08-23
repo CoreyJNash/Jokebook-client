@@ -20,7 +20,7 @@ const createJoke = function (data) {
       url: config.apiUrl + '/jokes/',
       method: 'GET',
       headers: {
-        Authorization: 'Token token=' + store.user.token
+        // Authorization: 'Token token=' + store.user.token
       }
     })
   }
