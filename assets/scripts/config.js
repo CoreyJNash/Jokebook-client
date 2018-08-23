@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://dashboard.heroku.com/apps/glacial-shelf-46176',
+  production: 'https://glacial-shelf-46176.herokuapp.com/',
   development: 'http://localhost:4741'
 }
 
