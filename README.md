@@ -5,6 +5,14 @@ LINK TO BACKEND REPO:
 ---------------------
 https://github.com/CoreyJNash/BackendJokesApi
 
+LINK TO DEPOLYED FRONT END:
+---------------------------
+https://coreyjnash.github.io/Jokebook-client/
+
+LINK TO DEPLOYED BACK END:
+--------------------------
+https://glacial-shelf-46176.herokuapp.com/
+
 OVERVIEW:
 ---------
 
