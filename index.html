@@ -25,7 +25,8 @@
                  <div class="modal-content">
                    <form id="sign-up" class="su-border">
                <fieldset>
-                 <legend class="su">Sign up!</legend>
+                 <legend class="su">Sign Up!</legend>
+                 <img src="/public/images/image.gif" alt="mygif">
                  <h4>Email and Password are Case Sensitive!</h4>
                  <input type="text" name="credentials[email]" placeholder="Email">
                  <input type="password" name="credentials[password]" placeholder="Password">
@@ -45,6 +46,7 @@
              <form id="sign-in" class="si-border">
          <fieldset>
            <legend class="si">Sign in!</legend>
+           <img src="/public/images/gif2.gif" alt="mygif2">
            <h4>Email and Password are Case Sensitive!</h4>
            <input type="text" name="credentials[email]" placeholder="Email">
            <input type="password" name="credentials[password]" placeholder="Password">
@@ -96,7 +98,7 @@
                     <legend class="cj">Write A Joke</legend>
                     <input type="text" name="joke[title]" placeholder="JOKE TITLE">
                     <br>
-                    <input type="text" name="joke[joke]" placeholder="WRITE YOUR JOKE HERE">
+                    <textarea name="joke[joke]" rows="5" cols="40" placeholder="WRITE YOUR JOKE HERE"></textarea>
                     <br>
                     <input type="text" name="joke[writer]" placeholder="WRITER">
                     <br>
@@ -107,16 +109,39 @@
             </div>
           </div>
           
-      <button id="show" type="button" class="btn btn-primary-show hidden" data-toggle="modal" data-target=".bd-show-modal-lg">Check Out These Jokes</button>
+      <button id="show" type="button" class="btn btn-primary-show" data-toggle="modal" data-target=".bd-show-modal-lg">Check Out These Jokes</button>
 
-      <div id="show-game-modal" class="modal fade bd-show-modal-lg" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div id="show-joke-modal" class="modal fade bd-show-modal-lg" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
-        <div id="show-games-list"></div>
+        <div id="show-jokes-list"></div>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+
+    <button id="update" type="button" class="btn btn-primary-update hidden" data-toggle="modal" data-target=".bd-update-modal-lg">Update A Joke</button>
+
+<div id="update-modal" class="modal fade bd-update-modal-lg" tabindex="-3" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form id="update-joke" class="uj-border">
+        <fieldset>
+          <legend class="uj">Update A Joke</legend>
+          <input type="text" name="joke[id]" placeholder="JOKE ID">
+          <br>
+          <input type="text" name="joke[title]" placeholder="NEW JOKE TITLE">
+          <br>
+          <textarea name="joke[joke]" rows="5" cols="40" placeholder="UPDATE JOKE HERE"></textarea>
+          <br>
+          <input type="text" name="joke[writer]" placeholder="UPDATE WRITER">
+          <br>
+          <input type="submit" value="Update This Joke!">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
         
         
         </div>
