@@ -25,9 +25,9 @@ const onCreateJoke = (event) => {
     const onUpdateJoke = (event) => {
         event.preventDefault()
         const data = getFormFields(event.target)
-        console.log(getFormFields(event.target))
-        jokesapi.updateJokes(data)
-          .then(jokesui.updateJokesSuccess)
+        // console.log(getFormFields(event.target))
+        jokesapi.updateJoke(data)
+          .then(jokesui.updateJokeSuccess)
           .catch(jokesui.failure)
       }
 
@@ -36,8 +36,7 @@ const onCreateJoke = (event) => {
    const addHandlers = () => {
     $('#create-joke').on('submit', onCreateJoke)
     $('#show').on('click', onShowJokes)
-    // $('.delete').on('click', onDeleteGame)
-    $('#update-Joke').on('submit', onUpdateJoke)
+    $('#update-joke').on('submit', onUpdateJoke)
    }
 
    module.exports = {
