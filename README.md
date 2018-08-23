@@ -48,4 +48,4 @@ I would like to add a comment section to the jokes log so people could comment o
 
 WIREFRAME:
 ----------
-[WIREFRAME]: https://i.imgur.com/PKNojLm.jpg
+![WIREFRAME](https://i.imgur.com/PKNojLm.jpg)
