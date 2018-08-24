@@ -47,7 +47,7 @@ const onCreateFailure = function (error) {
   }
 
   const onDeleteFailure = function () {
-    $('#message').text('This isn\t your joke!  Stop that!')
+    $('#message').text('This is NOT your joke!  Stop that!')
     $('#message').css('font-family', 'Shadows Into Light')
     $('#message').css('font-size', '50px')
     $('#message').css('text-shadow', '-1px -1px 0 #000', '1px -1px 0 #000', '-1px 1px 0 #000', '1px 1px 0 #000')
@@ -76,7 +76,7 @@ const onCreateFailure = function (error) {
   
 
   const failure = (error) => {
-    $('#message').text('This isn\t your joke!')
+    $('#message').text('This is NOT your joke!')
     $('#message').css('font-family', 'Shadows Into Light')
     $('#message').css('font-size', '50px')
     $('#message').css('text-shadow', '-1px -1px 0 #000', '1px -1px 0 #000', '-1px 1px 0 #000', '1px 1px 0 #000')
