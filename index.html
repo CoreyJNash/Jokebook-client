@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Joke Book</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div class="img-container">
+        <div class="inner-container">
+            <h1>Joke Book</h1>
+            <h2>A Place to View and Write Jokes </h2>
+            <div id="message"></div>
+            <div class="wrapper">
+              <button id="signup" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-up-modal">Sign Up</button>
+             <div id="sign-up-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+               <div class="modal-dialog modal-lg" role="document">
+                 <div class="modal-content">
+                   <form id="sign-up" class="su-border">
+               <fieldset>
+                 <legend class="su">Sign Up!</legend>
+                 <img class="mygifsu" src="./public/images/image.gif" alt="mygif">
+                 <h4>Email and Password are Case Sensitive!</h4>
+                 <input type="text" name="credentials[email]" placeholder="Email">
+                 <input type="password" name="credentials[password]" placeholder="Password">
+                 <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                 <input type="submit" value="Sign up!">
+               </fieldset>
+             </form>
+             <div class="signupmessage"></div>
+               </div>
+              </div>
+             </div>
+
+             <button id="signin" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+       <div id="sign-in-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+         <div class="modal-dialog modal-lg" role="document">
+           <div class="modal-content">
+             <form id="sign-in" class="si-border">
+         <fieldset>
+           <legend class="si">Sign in!</legend>
+           <img class="mygif" src="./public/images/gif2.gif" alt="mygif2">
+           <h4>Email and Password are Case Sensitive!</h4>
+           <input type="text" name="credentials[email]" placeholder="Email">
+           <input type="password" name="credentials[password]" placeholder="Password">
+           <input type="submit" value="Sign in!">
+         </fieldset>
+       </form>
+         </div>
+        </div>
+       </div>
+
+       <button id="changepassword" type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#change-password-modal">Change Password</button>
+       <div id="change-password-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+         <div class="modal-dialog modal-lg" role="document">
+           <div class="modal-content">
+             <form id="change-password" class="cp-border">
+         <fieldset>
+           <legend class="cp">Change Password!</legend>
+           <input type="password" name="passwords[old]" placeholder="Old Password">
+           <input type="password" name="passwords[new]" placeholder="New Password">
+           <input type="submit" value="Change Password!">
+         </fieldset>
+       </form>
+         </div>
+        </div>
+       </div>
+
+       <button id="signout" type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#sign-out-modal">Sign Out</button>
+       <div id="sign-out-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+         <div class="modal-dialog modal-lg" role="document">
+           <div class="modal-content">
+             <form id="sign-out" class="so-border">
+         <fieldset>
+           <legend class="so">Sign Out!</legend>
+           <input type="submit" value="Sign Out!">
+         </fieldset>
+       </form>
+         </div>
+         </div>
+         </div>
+        
+         <div class="crud-buttons">
+          <button id="create" type="button" class="btn btn-primary-create hidden" data-toggle="modal" data-target=".bd-example-modal-lg">Write A Joke!</button>
+          
+          <div id="create-joke-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <form id="create-joke" class="cj-border">
+                  <fieldset>
+                    <legend class="cj">Write A Joke</legend>
+                    <input type="text" name="joke[title]" placeholder="JOKE TITLE">
+                    <br>
+                    <textarea name="joke[joke]" rows="5" cols="40" placeholder="WRITE YOUR JOKE HERE"></textarea>
+                    <br>
+                    <input type="text" name="joke[writer]" placeholder="WRITER">
+                    <br>
+                    <input id="create-jokes" type="submit" value="Write A Joke">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+      <button id="show" type="button" class="btn btn-primary-show" data-toggle="modal" data-target=".bd-show-modal-lg">Check Out These Jokes</button>
+
+      <div id="show-joke-modal" class="modal fade bd-show-modal-lg" tabindex="-2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div id="show-jokes-list"></div>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <button id="update" type="button" class="btn btn-primary-update hidden" data-toggle="modal" data-target=".bd-update-modal-lg">Update A Joke</button>
+
+<div id="update-modal" class="modal fade bd-update-modal-lg" tabindex="-3" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form id="update-joke" class="uj-border">
+        <fieldset>
+          <legend class="uj">Update A Joke</legend>
+          <input type="text" name="joke[id]" placeholder="JOKE ID">
+          <br>
+          <input type="text" name="joke[title]" placeholder="NEW JOKE TITLE">
+          <br>
+          <textarea name="joke[joke]" rows="5" cols="40" placeholder="UPDATE JOKE HERE"></textarea>
+          <br>
+          <input type="text" name="joke[writer]" placeholder="UPDATE WRITER">
+          <br>
+          <input type="submit" value="Update This Joke!">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+        
+        
+        </div>
+        </div>
+        </div>
+
+        </div>
+          
+    </body>
+</html>
