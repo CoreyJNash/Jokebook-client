@@ -311,4 +311,20 @@ li {
     border-bottom-right-radius: 4px;
 }
 
+.show-log-in {
+    display: none;
+}
+
+.logged-in .show-log-in {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+// .delete:hover {
+//     opacity: .1;
+// }
+
+
 
